@@ -1,0 +1,442 @@
+
+/*-------------------------------------------------------*/
+  /* General */
+/*-------------------------------------------------------*/
+html,body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: rgba(0,0,0,0.87);
+}
+
+img {
+  max-width: 100%;
+}
+a:focus,
+button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+
+#loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #eee;
+  z-index: 9999999999999;
+}
+
+.load-circle {
+  margin: 50vh auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  border: 4px solid #2196F3;
+  -webkit-animation: rotate 1.6s infinite linear;
+  animation: rotate 2.2s infinite linear;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+}
+
+.load-circle .one{
+  width: 20px;
+  height: 20px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: #fff;
+  float: left;
+  border: 3px solid #E91E63;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.39);
+}
+
+@-webkit-keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+/*-------------------------------------------------------*/
+  /* Buttons */
+/*-------------------------------------------------------*/
+.btn {
+  cursor: pointer;
+  transition: ease all 0.3s;
+}
+.btn:hover {
+  box-shadow: 0 0 32px rgba(0,0,0,0.35)
+}
+.btn-01 {
+  background: #fe1c5b;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  position: relative;
+  padding-right: 30px;
+  border: none;
+  border-radius: 0;
+}
+.btn-01 i{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #c51244;
+  width: 25px;
+  line-height: 30px;
+}
+
+.btn-02 {
+  background: #8343ff;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  position: relative;
+  padding-right: 30px;
+  border: none;
+  border-radius: 0;
+}
+.btn-02 i{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #5a22c5;
+  width: 25px;
+  line-height: 30px;
+}
+
+/*-------------------------------------------------------*/
+  /* Header Start */
+/*-------------------------------------------------------*/
+.fixed-header {
+  background: #111;
+  box-shadow: 0 0 19px rgba(0, 0, 0, 0.91);
+}
+.navbar-light .navbar-brand {
+  color: #fff !important;
+  font-weight: 800;
+}
+ .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+ }
+ .header .navbar {
+  padding: 0;
+ }
+ .header .navbar-nav .nav-link {
+  padding: 26px 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff !important;
+ }
+
+ .header .navbar-nav .nav-btn .nav-link {
+  padding: 8px 20px;
+  background: #5ededd;
+  border-radius: 30px;
+  margin: 18px 0 0 30px;
+ }
+ .header .navbar-nav .nav-btn .nav-link i {
+  margin-right: 8px;
+ }
+
+
+/*-------------------------------------------------------*/
+  /* Header End */
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+  /* Home Banner */
+/*-------------------------------------------------------*/
+.home-banner {
+  text-align: center;
+  background-attachment: fixed;
+  position: relative;
+}
+.home-banner:after {
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  opacity: 0.9;
+}
+.home-banner .intor-text {
+  z-index: 1;
+  width: 700px;
+  max-width: 100%;
+  display: inline-block;
+  top: 50%;
+  text-align: center;
+  position: relative;
+  padding: 130px 0 100px;
+}
+.home-banner h1 {
+  color: #fff;
+  font-size: 65px;
+  font-weight: 800;
+}
+
+.home-banner h1 span {
+  color: #5ededd;
+}
+.home-banner p {
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+  background: #5ededd;
+  padding: 10px 25px;
+  border-radius: 30px;
+  margin-top: 22px;
+}
+
+/*-------------------------------------------------------*/
+  /* Product */
+/*-------------------------------------------------------*/
+.product a {
+  text-decoration: none;
+  color: #fff;
+}
+.page-section {
+  padding: 80px 0;
+  background: #f3f3f3;
+}
+.product {
+  margin: 15px 0;
+  padding: 0;
+}
+.product .product-img {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.37);
+  overflow: hidden;
+  height: 236px;
+  padding: 7px;
+  background: #fff;
+}
+.product .preview-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: ease all 0.3s;
+}
+.product:hover .preview-link {
+  opacity: 1;
+}
+
+.product .count {
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  background: #fe1c5b;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50%;
+  box-shadow: 0 0 32px rgba(0,0,0,0.25);
+  z-index: 1;
+}
+.product .count.paid {
+  background: #8343ff;
+}
+
+.product .product-info {
+  padding: 0;
+}
+.product h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+  color: #111;
+  transition: ease all 0.3s;
+  text-shadow: 1px 1px #fff;
+  letter-spacing: 2px;
+}
+.product:hover h2 {
+}
+.product .product-btns .btn-01 {
+  margin-right: 15px;
+}
+.product .product-btns .btn:hover,
+.product .product-btns .btn:active,
+.product .product-btns .btn:focus {
+  color: #fff;
+}
+
+
+/*-------------------------------------------------------*/
+  /* Footer */
+/*-------------------------------------------------------*/
+footer {
+  background: #111;
+  text-align: center;
+  padding: 30px 0;
+}
+footer p{
+  margin: 0;
+  color: #fff;
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+/*-------------------------------------------------------*/
+  /* Preview Header */
+/*-------------------------------------------------------*/
+.google-ads {
+  margin: 10px 0;
+  width: 730px;
+  height: 92px;
+  border: 1px solid #ddd;
+}
+.preview-header {
+  background: #fff;
+  padding: 0;
+  border-bottom: 2px solid #ddd;
+}
+.full-screen-preview__frame {
+  width: 100%;
+  height: -webkit-calc(100vh - 120px);
+  height: -moz-calc(100vh - 120px);
+  height: -o-calc(100vh - 120px);
+  height: calc(100vh - 120px);
+}
+
+
+.demo-section {
+}
+
+.title {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.title h2 {
+  margin: 0;
+  padding: 0 0 10px;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.title p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  width: 500px;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.love-section {
+  background: url(../img/banner-bg.png) #ececec fixed;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.heading {
+  text-align: center;
+}
+.heading h3 {
+  margin: 0;
+  padding: 0 0 40px;
+  font-size: 28px;
+  font-weight: 300;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.features-box {
+  box-shadow: 0 .25rem .125rem 0 rgba(0,0,0,.05);
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 400;
+  font-size: 18px;
+  color: #333;
+  letter-spacing: 1px;
+}
+.features-box label {
+  margin: 0;
+}
+
+.features-section {
+  padding: 80px 0;
+  background: #111;
+}
+
+.features-section .heading h3 {
+  color: #fff;
+}
+
+.purchase-section {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.purchase-section span {
+  color: #333;
+}
+.purchase-section h3 {
+  width: 600px;
+  margin: 0 auto;
+  font-size: 35px;
+  font-weight: 300;
+  display: inline-block;
+  padding: 10px 0 40px;
+  letter-spacing: 1px;
+  line-height: 45px;
+}
+.purchase-section h3 span {
+  color: #5ededd;
+  font-weight: 600;
+}
+
+.purchase-section a {
+  padding: 15px 50px;
+  background: #5ededd;
+  border-radius: 30px;
+  margin: 18px 0 0 30px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+ }
+ .purchase-section a i {
+  margin-right: 8px;
+ }
